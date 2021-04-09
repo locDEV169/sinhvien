@@ -10,10 +10,12 @@ class MainActivity : AppCompatActivity() {
     val countrySource = listOf<CountryInfo>(
         CountryInfo("Mai Tan Hung","11.11.2000","abc",R.drawable.profile),
         CountryInfo("Nguyen Van Loc","02.11.2000","abc",R.drawable.loc_1),
-        CountryInfo("Nguyen Nhat Truong","1.12.2000","abc",R.drawable.videofilmer),
+        CountryInfo("Nguyen Van D","1.12.2000","abc",R.drawable.videofilmer),
         CountryInfo("Nguyen Tu Van","16.01.2000","abc",R.drawable.videofilmer),
-        CountryInfo("Nguyen Van Long","1.11.2000","abc",R.drawable.videofilmer)
+        CountryInfo("Nguyen Van C","1.11.2000","abc",R.drawable.videofilmer),
+        CountryInfo("Nguyen Van B","1.11.2000","abc",R.drawable.weiem)
     )
+    //run
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
