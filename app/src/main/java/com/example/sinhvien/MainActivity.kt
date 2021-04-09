@@ -3,8 +3,10 @@ package com.example.sinhvien
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.URLUtil
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.backColor).setOnClickListener {
             countryRecyclerView.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+        }
+        findViewById<Button>(R.id.about).setOnClickListener {
+//            Toast.makeText(applicationContext, "test", Toast.LENGTH_LONG).show()
+            val text = "This is an app about manage of student!!!"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
         }
     }
 }
