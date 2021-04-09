@@ -22,4 +22,5 @@ class MainActivity : AppCompatActivity() {
         countryRecyclerView.layoutManager = GridLayoutManager(this,2)
         countryRecyclerView.adapter = countryAdapter
     }
+    //caiditconmemaythangchumbrand
 }
