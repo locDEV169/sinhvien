@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CountryRVAdapter(val context: Context, val countrySource:List<CountryInfo>)
+class CountryRVAdapter(val context: Context, val countrySource:List<SchoolInfo>)
     : RecyclerView.Adapter<ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -20,14 +20,15 @@ class CountryRVAdapter(val context: Context, val countrySource:List<CountryInfo>
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.nameTV.text = countrySource[position].name
-        holder.populationTV.text = countrySource[position].population
+        holder.positionTV.text = countrySource[position].position
         holder.detail.text = countrySource[position].detail
-        holder.flagIV.setImageResource(countrySource[position].flag)
+        holder.imgIV.setImageResource(countrySource[position].flag)
     }
+
 }
 class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    val flagIV = view.findViewById<ImageView>(R.id.flagIV)
+    val imgIV = view.findViewById<ImageView>(R.id.imgTV)
     val nameTV = view.findViewById<TextView>(R.id.nameTV)
-    val populationTV = view.findViewById<TextView>(R.id.yearTV)
+    val positionTV = view.findViewById<TextView>(R.id.positionTV)
     val detail = view.findViewById<TextView>(R.id.detailTV)
 }
